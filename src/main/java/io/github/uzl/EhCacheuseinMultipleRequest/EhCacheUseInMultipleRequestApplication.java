@@ -10,3 +10,4 @@ public class EhCacheUseInMultipleRequestApplication {
 		SpringApplication.run(EhCacheUseInMultipleRequestApplication.class, args);
 	}
 }
+
