@@ -1,5 +1,6 @@
 package io.github.uzl.EhCacheuseinMultipleRequest.repository;
 
+import io.github.uzl.EhCacheuseinMultipleRequest.model.Country;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Repository;
 
@@ -9,27 +10,27 @@ import java.util.HashMap;
 public class DummyDataRepo {
 
 
-  public String getCountryByCode(String code) {
+  public Country getCountryByCode(String code) {
     // for dummy data purpose only.
     // This should be fetched from database or any file
     System.out.println(">>> --- >>>> Fetching from Database... <<< --- <<<< "); // here actually dummy data
-    String dbResult = "";
+    Country country = new Country();
     if (code.equals("AU")) {
-      dbResult = "Australia";
+      country.setCountryName( "Australia");
     }
     else if (code.equals("BD")){
-      dbResult = "Bangladesh";
+      country.setCountryName( "Bangladesh");
     }
     else if (code.equals("CA")){
-      dbResult = "Canada";
+      country.setCountryName( "Canada");
     }
     else if (code.equals("DK")){
-      dbResult = "Denmark";
+      country.setCountryName( "Denmark");
     }
     else {
-      dbResult = "Country not in list.";
+      country.setCountryName( "Unknown country.");
     }
 
-    return dbResult;
+    return country;
   }
 }

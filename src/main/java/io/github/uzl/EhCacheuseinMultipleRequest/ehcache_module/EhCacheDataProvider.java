@@ -1,5 +1,6 @@
 package io.github.uzl.EhCacheuseinMultipleRequest.ehcache_module;
 
+import io.github.uzl.EhCacheuseinMultipleRequest.model.Country;
 import io.github.uzl.EhCacheuseinMultipleRequest.repository.DummyDataRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.annotation.Cacheable;
@@ -12,7 +13,7 @@ public class EhCacheDataProvider {
   EhCacheStoringLayer cacheStoringLayer;
 
 
-    public String getCountryNameByCode(String code){
+    public Country getCountryNameByCode(String code){
       return cacheStoringLayer.getData(code);
     }
 }
